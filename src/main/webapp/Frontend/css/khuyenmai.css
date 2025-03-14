@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* Container của trang khuyến mãi */
+    .promo-container {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .promo-container h3 {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Card khuyến mãi */
+    .promo-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #fff;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .promo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Ảnh khuyến mãi */
+    .promo-img {
+      width: 100%;
+      height: 200px; /* Chiều cao ảnh, bạn có thể điều chỉnh */
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    /* Thông tin khuyến mãi */
+    .promo-info {
+      padding: 15px;
+      text-align: center;
+      background-color: #f8f9fa;
+    }
+    .promo-title {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #D2691E;
+      margin: 0;
+    }
+    
+    /* Overlay nhãn HOT (hoặc bạn có thể chỉnh sửa nội dung) */
+    .promo-card::before {
+      content: "HOT";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #D2691E;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }

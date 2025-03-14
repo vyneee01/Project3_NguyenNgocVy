@@ -57,7 +57,7 @@
         <a href="addNhaCungCap.jsp" class="add-button">Thêm Nhà Cung Cấp</a>
     </div>
     <div style="text-align: center; margin-top: 20px;">
-<a href="${pageContext.request.contextPath}/Backend/trangchu.jsp" class="back-button">Quay lại trang chủ</a></div>
+<a href="${pageContext.request.contextPath}/Backend/NNVtrangchu.jsp" class="back-button">Quay lại trang chủ</a></div>
     
 </section>
 <%@ include file="Layout/footer.jsp" %>

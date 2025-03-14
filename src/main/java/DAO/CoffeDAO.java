@@ -191,29 +191,35 @@ public class CoffeDAO extends HttpServlet {
         }
         return nv;
     }
-    public List<SanPham> getBestSeller() {
-        List<SanPham> list = new ArrayList<>();
-        String sql = "SELECT * FROM SanPham ORDER BY soLuongBan DESC LIMIT 4"; // Lấy 4 sản phẩm bán chạy nhất
-        try {
-            Connection conn = connect();
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                String maSP = rs.getString("MaSP");
-                String tenSP = rs.getString("TenSP");
-                String anh = rs.getString("Anh");
-                String dvt = rs.getString("DVT");
-                float donGia = rs.getFloat("DonGia");
-                String maNhomSP = rs.getString("MaNhomSP");
-
-                SanPham sp = new SanPham(maSP, tenSP, anh, dvt, donGia, maNhomSP);
-                list.add(sp);
-            }
+    public List<SanPham> getSanPhamByMaNhom(String maNhom) {
+        List<SanPham> products = new ArrayList<>();
+        String query = "SELECT * FROM SanPham WHERE MaNhomSP = ?";
+        try (Connection conn = connect();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+             
+             // Đặt tham số cho truy vấn
+             stmt.setString(1, maNhom);
+             
+             try (ResultSet rs = stmt.executeQuery()) {
+                 while (rs.next()) {
+                     String maSP = rs.getString("MaSP");
+                     String tenSP = rs.getString("TenSP");
+                     String anh = rs.getString("Anh");
+                     String dvt = rs.getString("DVT");
+                     float donGia = rs.getFloat("DonGia");
+                     String maNhomSP = rs.getString("MaNhomSP");
+                     
+                     // Tạo đối tượng SanPham và thêm vào danh sách
+                     SanPham sp = new SanPham(maSP, tenSP, anh, dvt, donGia, maNhomSP);
+                     products.add(sp);
+                 }
+             }
         } catch (SQLException e) {
-            e.printStackTrace();
+             e.printStackTrace();
         }
-        return list;
+        return products;
     }
+
 
 // ---Phần của Sản Phẩm
     public void addSanPham(SanPham sp) {
@@ -267,6 +273,56 @@ public class CoffeDAO extends HttpServlet {
             e.printStackTrace();
         }
         return danhSach;
+    }
+    public List<SanPham> getBestSellersByPrice() {
+        List<SanPham> bestSellers = new ArrayList<>();
+        String query = "SELECT * FROM SanPham WHERE DonGia = 50000";  // Lọc sản phẩm có giá 50.000 VND
+        try (Connection conn = connect(); 
+             PreparedStatement stmt = conn.prepareStatement(query); 
+             ResultSet rs = stmt.executeQuery()) {
+             
+            while (rs.next()) {
+                // Lấy thông tin sản phẩm từ kết quả truy vấn
+                String maSP = rs.getString("MaSP");
+                String tenSP = rs.getString("TenSP");
+                String anh = rs.getString("Anh");
+                String dvt = rs.getString("DVT");
+                float donGia = rs.getFloat("DonGia");
+                String maNhomSP = rs.getString("MaNhomSP");
+
+                // Tạo đối tượng SanPham và thêm vào danh sách
+                SanPham sp = new SanPham(maSP, tenSP, anh, dvt, donGia, maNhomSP);
+                bestSellers.add(sp);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return bestSellers;  // Trả về danh sách sản phẩm có giá 50.000 VND
+    }
+    public List<SanPham> getALLCoffe() {
+        List<SanPham> products = new ArrayList<>();
+        String query = "SELECT * FROM SanPham WHERE MaNhomSP = ?";
+        try (Connection conn = connect(); 
+             PreparedStatement stmt = conn.prepareStatement(query);
+        	ResultSet rs = stmt.executeQuery()){
+        		
+         
+                 while (rs.next()) {
+                     String maSP = rs.getString("MaSP");
+                     String tenSP = rs.getString("TenSP");
+                     String anh = rs.getString("Anh");
+                     String dvt = rs.getString("DVT");
+                     float donGia = rs.getFloat("DonGia");
+                     String maNhomSP = rs.getString("MaNhomSP");
+                     // Tạo đối tượng SanPham
+                     SanPham sp = new SanPham(maSP, tenSP, anh, dvt, donGia, maNhomSP);
+                     products.add(sp);
+                 
+             }
+        } catch (SQLException e) {
+             e.printStackTrace();
+        }
+        return products;
     }
 
     // Lấy sản phẩm theo MaSP

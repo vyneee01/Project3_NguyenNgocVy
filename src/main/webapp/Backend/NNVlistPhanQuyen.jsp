@@ -52,7 +52,7 @@
         <a href="addPhanQuyen.jsp" class="add-button">Thêm Phân Quyền</a>
     </div>
     <div style="text-align: center; margin-top: 20px;">
-    <a href="${pageContext.request.contextPath}/Backend/trangchu.jsp" class="back-button">Quay lại trang chủ</a>
+    <a href="${pageContext.request.contextPath}/Backend/NNVtrangchu.jsp" class="back-button">Quay lại trang chủ</a>
 </div>
     
 </section>

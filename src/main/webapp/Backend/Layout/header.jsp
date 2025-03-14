@@ -46,13 +46,13 @@
 
 <div class="header">
     <div class="logo">
-        <img src="${pageContext.request.contextPath}/images/logo.jpg" alt="Logo">
+        <img src="${pageContext.request.contextPath}/images/logo.png" alt="Logo">
         Adminator
     </div>
     <nav>
-        <a href="${pageContext.request.contextPath}/Backend/trangchu.jsp">Trang Chủ</a>
-        <a href="${pageContext.request.contextPath}/Backend/NhanVien/listNhanVien.jsp">Nhân Viên</a>
-        <a href="${pageContext.request.contextPath}/Backend/SanPham/listSanPham.jsp">Sản Phẩm</a>
+        <a href="${pageContext.request.contextPath}/Backend/NNVtrangchu.jsp">Trang Chủ</a>
+        <a href="${pageContext.request.contextPath}/Backend/NhanVien/NNVlistNhanVien.jsp">Nhân Viên</a>
+        <a href="${pageContext.request.contextPath}/Backend/SanPham/NNVlistSanPham.jsp">Sản Phẩm</a>
         <a href="#" onclick="alert('Chức năng đang bảo trì!'); return false;">Hóa Đơn</a>
 
         <% if (user != null) { %>

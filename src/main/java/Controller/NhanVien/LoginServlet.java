@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
         // Kiểm tra nếu đã đăng nhập
         HttpSession session = request.getSession(false);
         if (session != null && session.getAttribute("user") != null) {
-            response.sendRedirect(request.getContextPath() + "/Backend/trangchu.jsp");
+            response.sendRedirect(request.getContextPath() + "/Backend/NNVtrangchu.jsp");
             return;
         }
 

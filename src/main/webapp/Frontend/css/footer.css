@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.footer {
+        text-align: center;
+        padding: 8px 0; /* Giảm chiều cao */
+        background: #f8f9fa; /* Màu nền đồng bộ với header */
+        font-size: 14px; /* Font nhỏ hơn để gọn */
+        font-weight: 500;
+        color: #555; /* Màu chữ nhẹ hơn */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .footer-section h5 {
+    font-size: 16px; /* Giảm kích thước tiêu đề */
+    font-weight: 600;
+}
+
+.footer-section p,
+.footer-section ul li a {
+    font-size: 14px; /* Giảm kích thước chữ nội dung */
+    color: #666; /* Màu nhẹ hơn */
+}
+
+.footer-section ul {
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    list-style: none;
+}
+
+.footer-section ul li a:hover {
+    color: #000; /* Hiệu ứng khi rê chuột */
+}

@@ -18,9 +18,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Nhập</title>
     <style>
+        /* Background với gradient hiện đại */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f2f5;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
             margin: 0;
             padding: 0;
             display: flex;
@@ -36,6 +37,15 @@
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 0.5s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         h2 {
             margin-bottom: 20px;
@@ -88,6 +98,29 @@
         .login-btn:active {
             background-color: #004085;
         }
+        /* Các tùy chọn bổ sung */
+        .extra-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .extra-options label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .extra-options input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .forgot-password {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -107,6 +140,13 @@
         <div class="input-group">
             <label for="password">Mật khẩu:</label>
             <input type="password" id="password" name="password" required>
+        </div>
+        <div class="extra-options">
+            <label>
+                <input type="checkbox" name="remember" value="true">
+                Nhớ tài khoản
+            </label>
+            <a href="#" class="forgot-password">Quên mật khẩu?</a>
         </div>
         <button type="submit" class="login-btn">Đăng Nhập</button>
     </form>

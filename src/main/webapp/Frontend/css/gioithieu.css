@@ -1,0 +1,99 @@
+@charset "UTF-8";
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .banner {
+    width: calc(100% - 100px); /* Banner sẽ nhỏ hơn toàn bộ chiều rộng 40px */
+    margin: 0 auto;         /* Căn giữa banner */
+    background: linear-gradient(to right, rgba(210, 180, 140, 0.8), rgba(255, 255, 255, 0.8)), 
+                url('${pageContext.request.contextPath}/images/anhbia2.jpg') no-repeat center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8B4513;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+        .highlight {
+            color: #8B4513;
+            font-weight: bold;
+        }
+        /* Khoảng cách chung */
+        .section-spacing {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        /* CSS cho phần Đội ngũ CoffeLuck */
+
+.team-card {
+    text-align: center;
+    padding: 30px;            /* Tăng khoảng cách bên trong */
+    min-height: 350px;        /* Tăng chiều cao tối thiểu cho card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card img {
+    width: 150px;             /* Tăng kích thước ảnh */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;       /* Ảnh tròn */
+    margin-bottom: 20px;      /* Tăng khoảng cách giữa ảnh và tên */
+}
+
+.team-card h5 {
+    font-size: 1.3rem;        /* Tăng kích thước chữ tiêu đề */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.team-card p {
+    font-size: 1rem;          /* Tăng kích thước chữ mô tả */
+    margin: 0;
+}
+
+		
+		/* Điều chỉnh khoảng cách giữa các cột thành 50px */
+		.section-spacing .row {
+		    gap: 50px; /* Mỗi thẻ cách nhau 50px */
+		}
+
+
+		/* Nếu muốn điều chỉnh khoảng cách giữa các cột */
+		.section-spacing .row {
+		    gap: 15px; /* Đảm bảo khoảng cách đều 15px giữa các card */
+		}
+
+        /* Testimonials */
+        .testimonial-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: #fff;
+        }
+        .testimonial-card p {
+            font-size: 0.95rem;
+        }
+        .testimonial-author {
+            font-weight: 600;
+            color: #D2691E;
+            margin-top: 10px;
+        }
+        .indented-container {
+	    padding-left: 20px;    /* Thụt vào 20px bên trái */
+	    padding-right: 20px;   /* Thụt vào 20px bên phải */
+		}
+
+        
