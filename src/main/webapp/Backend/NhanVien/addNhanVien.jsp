@@ -1,9 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.nio.charset.StandardCharsets" %>
-<% 
-    request.setCharacterEncoding("UTF-8"); 
-    response.setCharacterEncoding("UTF-8"); 
+<%@ page import="java.util.List" %>
+<%@ page import="model.PhanQuyen" %>
+<%@ page import="DAO.NNVPhanQuyenDAO" %>
+
+<%
+    request.setCharacterEncoding("UTF-8");
+    response.setCharacterEncoding("UTF-8");
 %>
+
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -11,12 +15,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm Nhân Viên</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/nhapdulieu.css">
 </head>
 <body>
 <%@ include file="../Layout/header.jsp" %>
 
-    <section class="form-container">
+<section class="form-container">
     <form class="form" action="addNhanVien" method="post">
         <h2>Thêm Nhân Viên Mới</h2>
 
@@ -51,14 +55,32 @@
         <input type="password" name="matKhau" required>
 
         <label for="maPQ">Mã Phân Quyền:</label>
-        <input type="text" name="maPQ" required>
+        <select name="maPQ" required>
+            <option value="" disabled selected>-- Chọn Mã PQ --</option>
+            <% 
+	        NNVPhanQuyenDAO dao = new NNVPhanQuyenDAO();
+	        List<PhanQuyen> phanQuyenList = dao.getAllPhanQuyen();
+	
+	        if (phanQuyenList != null && !phanQuyenList.isEmpty()) {
+	            for (PhanQuyen pq : phanQuyenList) {
+	        %>
+                        <option value="<%= pq.getMaPQ() %>">
+                            <%= pq.getMaPQ() %> - <%= pq.getTenQuyen() %>
+                        </option>
+            <%
+                    }
+                } else {
+            %>
+                <option value="" disabled>Không có phân quyền nào</option>
+            <% } %>
+        </select>
 
         <button type="submit">Thêm Nhân Viên</button>
     </form>
 </section>
 
-<a href="${pageContext.request.contextPath}/listNhanVien.jsp" class="back-link">Về Trang Danh Sách</a>
-    <%@ include file="../Layout/footer.jsp" %>	
+<a href="${pageContext.request.contextPath}/NNVlistNhanVien.jsp" class="back-link">Về Trang Danh Sách</a>
+<%@ include file="../Layout/footer.jsp" %>
 
 </body>
 </html>

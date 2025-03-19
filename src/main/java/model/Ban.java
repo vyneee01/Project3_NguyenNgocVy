@@ -1,21 +1,45 @@
 package model;
 
 public class Ban {
-    private String maBan;
+    private int maBan;
     private boolean trangThai;
-    private String maKV;
+    private int maKV;
 
-    public Ban() {}
-    public Ban(String maBan, boolean trangThai, String maKV) {
+    // Constructor không tham số
+    public Ban() {
+    }
+
+    // Constructor có tham số
+    public Ban(int maBan, boolean trangThai, int maKV) {
         this.maBan = maBan;
         this.trangThai = trangThai;
         this.maKV = maKV;
     }
 
-    public String getMaBan() { return maBan; }
-    public void setMaBan(String maBan) { this.maBan = maBan; }
-    public boolean isTrangThai() { return trangThai; }
-    public void setTrangThai(boolean trangThai) { this.trangThai = trangThai; }
-    public String getMaKV() { return maKV; }
-    public void setMaKV(String maKV) { this.maKV = maKV; }
+    // Getter và Setter
+    public int getMaBan() {
+        return maBan;
+    }
+
+    public void setMaBan(int maBan) {
+        this.maBan = maBan;
+    }
+
+    public boolean isTrangThai() {
+        return trangThai;
+    }
+
+    public void setTrangThai(boolean trangThai) {
+        this.trangThai = trangThai;
+    }
+
+    public int getMaKV() {
+        return maKV;
+    }
+
+    public void setMaKV(int maKV) {
+        this.maKV = maKV;
+    }
+
+
 }

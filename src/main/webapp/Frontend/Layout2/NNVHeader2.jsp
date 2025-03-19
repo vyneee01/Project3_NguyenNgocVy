@@ -1,5 +1,6 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%@ page import="model.NNVKhachHang" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -20,12 +21,19 @@
         </a>
 
 		<!-- Thanh tìm kiếm dài hơn, thu nhỏ chiều rộng -->
-		<form class="d-flex me-auto w-40" action="timkiem.jsp" method="GET">
-		    <input class="form-control me-2" type="search" name="query" placeholder="Tìm kiếm" aria-label="Search">
-		    <button class="btn btn-outline-danger" type="submit" style="font-size: 12px; padding: 3px 8px;">
+
+		<form class="d-flex me-auto flex-grow-1 align-items-center" action="timkiem.jsp" method="GET" 
+		      style="max-width: 400px; height: 36px;">
+		    <input class="form-control me-2" type="search" name="query" placeholder="Tìm kiếm" 
+		           aria-label="Search" 
+		           style="height: 100%; font-size: 14px; border-radius: 20px; padding-left: 15px;">
+		    <button class="btn btn-outline-danger d-flex align-items-center justify-content-center" type="submit" 
+		            style="font-size: 14px; width: 36px; height: 36px; border-radius: 50%; display: flex;">
 		        <i class="fa-solid fa-magnifying-glass"></i>
 		    </button>
 		</form>
+
+
 
         <!-- Giỏ hàng và Hotline -->
         <div class="d-flex align-items-center">
@@ -35,6 +43,20 @@
             <a href="${pageContext.request.contextPath}/giohang.jsp" class="btn btn-outline-dark">
                 <i class="fas fa-shopping-cart"></i> Giỏ hàng
             </a>
+           
+            <%
+			    NNVKhachHang khachHang = (NNVKhachHang) session.getAttribute("khachHang");
+			    if (khachHang != null) {
+			%>
+			    <a href="NNVHoiVien.jsp" class="btn btn-outline-dark">Chào <%= khachHang.getHoTen() %></a>
+			<%
+			    } else {
+			%>
+			    <a href="NNVHoiVien.jsp" class="btn btn-outline-dark">Đăng nhập</a>
+			<%
+			    }
+			%>
+
         </div>
     </div>
 </header>
@@ -63,10 +85,10 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/Frontend/NNVkhuyenMai.jsp" >Khuyến mãi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="alert('Chức năng đang bảo trì!'); return false;">Hội viên</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/Frontend/NNVHoiVien.jsp">Hội viên</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="alert('Chức năng đang bảo trì!'); return false;">Quà Tặng</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/Frontend/NNVQuaTang.jsp"  >Quà Tặng</a>
                 </li>
             </ul>
         </div>

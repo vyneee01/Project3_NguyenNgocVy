@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     
     <!-- File CSS tùy chỉnh -->
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Frontend/css/sanpham.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Frontend/css/test.css">
 </head>
 <body>
 
@@ -41,7 +41,7 @@
                         <a href="#" id="category1Link">Cà Phê</a>
                     </li>
                     <li class="list-group-item">
-                        <a href="#" id="category2Link">Nước Ép</a>
+                        <a href="#" id="category2Link">Nước Ép - Sinh Tố</a>
                     </li>
                     <li class="list-group-item">
                         <a href="#" id="category3Link">Bánh</a>
@@ -211,9 +211,10 @@
                                     <p class="product-name"><%= sp.getTenSP() %></p>
                                     <p class="product-price"><%= sp.getDonGia() %> VND</p>
                                 </div>
-                                <a href="muaSanPham?maSP=<%= sp.getMaSP() %>" class="buy-button">
-                                    🛒 Đặt Mua
-                                </a>
+                                <a href="NNVChiTietSanPham.jsp?maSP=<%= sp.getMaSP() %>" class="buy-button">
+								    🛒 Đặt Mua
+								</a>
+
                             </div>
                         </div>
                         <%
@@ -245,9 +246,10 @@
                                     <p class="product-name"><%= sp.getTenSP() %></p>
                                     <p class="product-price"><%= sp.getDonGia() %> VND</p>
                                 </div>
-                                <a href="muaSanPham?maSP=<%= sp.getMaSP() %>" class="buy-button">
-                                    🛒 Đặt Mua
-                                </a>
+                                <a href="Frontend/NNVChiTietSanPham.jsp?maSP=<%= sp.getMaSP() %>" class="buy-button">
+								    🛒 Đặt Mua
+								</a>
+
                             </div>
                         </div>
                         <%
@@ -325,11 +327,46 @@
             document.getElementById("category3Products").style.display = "none";
             document.getElementById("category4Products").style.display = "block";
         });
+        
+        document.querySelectorAll(".product-card").forEach(card => {
+            card.addEventListener("click", function () {
+                let productName = this.querySelector(".product-name").textContent;
+                let productPrice = this.querySelector(".product-price").textContent;
+                let productImage = this.querySelector(".product-img").src;
+
+                document.getElementById("modalProductName").textContent = productName;
+                document.getElementById("modalProductPrice").textContent = productPrice;
+                document.getElementById("modalProductImage").src = productImage;
+
+                let modal = new bootstrap.Modal(document.getElementById("productModal"));
+                modal.show();
+            });
+        });
     </script>
 
-    <%@ include file="../Layout2/NNVFooter2.jsp" %>
+<!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <h5 class="modal-title w-100 text-orange-brown" id="productModalLabel">Chi tiết sản phẩm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img id="modalProductImage" src="" class="img-fluid mb-2 mx-auto d-block" alt="Sản phẩm">
+        <h5 id="modalProductName" class="mt-3 text-orange-brown"></h5>
+        <p id="modalProductPrice" class="text-danger"></p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-orange-brown" data-bs-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <%@ include file="../Layout2/NNVFooter2.jsp" %>
 </body>
 </html>

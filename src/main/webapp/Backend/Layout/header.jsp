@@ -47,16 +47,17 @@
 <div class="header">
     <div class="logo">
         <img src="${pageContext.request.contextPath}/images/logo.png" alt="Logo">
-        Adminator
+        Quản Lý CoffeLuck
     </div>
     <nav>
         <a href="${pageContext.request.contextPath}/Backend/NNVtrangchu.jsp">Trang Chủ</a>
         <a href="${pageContext.request.contextPath}/Backend/NhanVien/NNVlistNhanVien.jsp">Nhân Viên</a>
         <a href="${pageContext.request.contextPath}/Backend/SanPham/NNVlistSanPham.jsp">Sản Phẩm</a>
-        <a href="#" onclick="alert('Chức năng đang bảo trì!'); return false;">Hóa Đơn</a>
-
+        <a href="${pageContext.request.contextPath}/Backend/KhachHang/NNVlistKhachHang.jsp">Khách Hàng</a>
+        <a href="${pageContext.request.contextPath}/Backend/NhapHang/NNVlistNhapHang.jsp">Nhập Hàng</a>
+<a href="${pageContext.request.contextPath}/Backend/ChiTietNhap/NNVlistChiTietNhap.jsp">Chi Tiết Nhập</a>
         <% if (user != null) { %>
-            <a href="#">Chào, <%= user.getTen() %>!</a>
+            <a href="#">Chào <%= user.getTen() %>!</a>
             <a href="${pageContext.request.contextPath}/LogoutServlet">Đăng Xuất</a>
         <% } else { %>
             <a href="${pageContext.request.contextPath}/Backend/login.jsp">Đăng Nhập</a>

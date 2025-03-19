@@ -44,6 +44,6 @@ public class updateSanPham extends HttpServlet {
         SanPham sanPham = new SanPham(maSP, tenSP, anh, dvt, donGia, maNhomSP);
         sanPhamDao.updateSanPham(sanPham);
 
-        response.sendRedirect("listSanPham.jsp");
+        response.sendRedirect("NNVlistSanPham.jsp");
     }
 }

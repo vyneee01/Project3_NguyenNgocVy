@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cập Nhật Sản Phẩm</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/nhapdulieu.css">
 </head>
 <body>
 <%@ include file="../Layout/header.jsp" %>
@@ -32,7 +32,7 @@
             <button type="submit">Cập Nhật</button>
         </form>
     </section>
-    <a href="${pageContext.request.contextPath}/Backend/SanPham/listSanPham.jsp" class="back-link">Về Trang Danh Sách</a>
+    <a href="${pageContext.request.contextPath}/Backend/SanPham/NNVlistSanPham.jsp" class="back-link">Về Trang Danh Sách</a>
         <%@ include file="../Layout/footer.jsp" %>	
     
 </body>

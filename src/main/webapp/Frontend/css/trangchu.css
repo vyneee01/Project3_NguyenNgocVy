@@ -1,87 +1,213 @@
 @charset "UTF-8";
 /* File: homepage.css */
+
 /* ============================================
-   Homepage Specific Styles
+   General Styles (Toàn cục)
    ============================================ */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
 
-/* --- Carousel (Trang chủ) --- */
+/* ============================================
+   Header Styles (Thanh menu)
+   ============================================ */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #D2691E;
+}
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+.navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover {
+    color: #D2691E;
+}
 
+/* --- Nút đăng nhập và giỏ hàng --- */
+.auth-cart-container {
+    display: flex;
+    align-items: center;
+}
+.auth-cart-container a {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.login-btn {
+    background-color: #D2691E;
+    color: white;
+}
+.login-btn:hover {
+    background-color: #b55e1a;
+}
+.cart-btn {
+    background-color: #ffffff;
+    color: #D2691E;
+    border: 1px solid #D2691E;
+}
+.cart-btn:hover {
+    background-color: #D2691E;
+    color: white;
+}
+
+/* ============================================
+   Carousel (Trang chủ)
+   ============================================ */
 .carousel-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 #carouselExampleIndicators {
-    width: 1300px; /* Chiều rộng cố định */
-    height: 400px; /* Tăng chiều cao lên 800px */
+    width: 1200px;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .carousel-inner {
     width: 100%;
     height: 100%;
 }
 .carousel-inner img {
-    width: 1300px;
-    height: 400px; /* Tăng chiều cao lên 800px */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-
-/* --- About Us Section --- */
+/* ============================================
+   About Us Section
+   ============================================ */
 .about-us {
     padding: 60px 0;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     text-align: center;
 }
 .about-us h2 {
     font-size: 2rem;
     color: #D2691E;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 .about-us p {
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* --- Features Section --- */
+/* ============================================
+   Features Section
+   ============================================ */
 .features {
     padding: 60px 0;
     text-align: center;
+    background-color: #f8f9fa;
 }
 .features .feature-item {
     padding: 20px;
 }
 .features i {
     font-size: 3rem;
-    color: #0d6efd;
+    color: #D2691E;
     margin-bottom: 10px;
 }
+.features h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+.features p {
+    font-size: 14px;
+    color: #666;
+}
 
-/* --- Newsletter Section --- */
+/* ============================================
+   Newsletter Section
+   ============================================ */
 .newsletter {
-    padding: 60px 0;
+    padding: 50px 0;
     background-color: #f1f1f1;
     text-align: center;
 }
 .newsletter h4 {
-    font-size: 1.75rem;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 .newsletter form {
     max-width: 500px;
     margin: 0 auto;
 }
+.newsletter input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.newsletter button {
+    width: 100%;
+    padding: 10px;
+    background-color: #D2691E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+.newsletter button:hover {
+    background-color: #b55e1a;
+}
+
+/* ============================================
+   Buy Button
+   ============================================ */
 .buy-button {
-    display: block;
+    display: inline-block;
     text-align: center;
     background-color: #D2691E;
-    color: #fff;
-    padding: 10px;
+    color: white;
+    padding: 10px 20px;
     margin-top: 10px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
 }
 .buy-button:hover {
-    background-color: #D2691E;
+    background-color: #b55e1a;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+.footer p {
+    margin: 0;
+    font-size: 14px;
 }

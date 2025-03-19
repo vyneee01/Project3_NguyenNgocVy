@@ -35,7 +35,7 @@ public class addSanPham extends HttpServlet {
         SanPham newSanPham = new SanPham(maSP, tenSP, anh, dvt, donGia, maNhomSP);
         sanPhamDao.addSanPham(newSanPham);
 
-        response.sendRedirect("listSanPham.jsp");
+        response.sendRedirect("NNVlistSanPham.jsp");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

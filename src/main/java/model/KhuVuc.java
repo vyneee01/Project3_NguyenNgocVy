@@ -1,21 +1,49 @@
 package model;
 
 public class KhuVuc {
-    private String maKV;
+    private int maKV;
     private String tenKV;
-    private String trangThai;
+    private boolean trangThai;
 
-    public KhuVuc() {}
-    public KhuVuc(String maKV, String tenKV, String trangThai) {
+    public KhuVuc() {
+    }
+
+    public KhuVuc(int maKV, String tenKV, boolean trangThai) {
         this.maKV = maKV;
         this.tenKV = tenKV;
         this.trangThai = trangThai;
     }
 
-    public String getMaKV() { return maKV; }
-    public void setMaKV(String maKV) { this.maKV = maKV; }
-    public String getTenKV() { return tenKV; }
-    public void setTenKV(String tenKV) { this.tenKV = tenKV; }
-    public String getTrangThai() { return trangThai; }
-    public void setTrangThai(String trangThai) { this.trangThai = trangThai; }
+    public int getMaKV() {
+        return maKV;
+    }
+
+    public void setMaKV(int maKV) {
+        this.maKV = maKV;
+    }
+
+    public String getTenKV() {
+        return tenKV;
+    }
+
+    public void setTenKV(String tenKV) {
+        this.tenKV = tenKV;
+    }
+
+    public boolean isTrangThai() {
+        return trangThai;
+    }
+
+    public void setTrangThai(boolean trangThai) {
+        this.trangThai = trangThai;
+    }
+
+    @Override
+    public String toString() {
+        return "KhuVuc{" +
+                "maKV=" + maKV +
+                ", tenKV='" + tenKV + '\'' +
+                ", trangThai=" + trangThai +
+                '}';
+    }
 }

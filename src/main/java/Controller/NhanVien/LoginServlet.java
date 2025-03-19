@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.NhanVien;
-import DAO.CoffeDAO; // Đổi từ NhanVienDAO thành CoffeDAO
+import DAO.NNVNhanVienDAO; // Đổi từ NhanVienDAO thành CoffeDAO
 
 @WebServlet("/Backend/NhanVien/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
         }
 
         // Gọi DAO để kiểm tra đăng nhập
-        CoffeDAO dao = new CoffeDAO();
+        NNVNhanVienDAO dao = new NNVNhanVienDAO();
         NhanVien nv = dao.checkLogin(username, password);
 
         if (nv != null) {
@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("user", nv);
 
             // Chuyển hướng về trang chủ
-            response.sendRedirect(request.getContextPath() + "/Backend/trangchu.jsp");
+            response.sendRedirect(request.getContextPath() + "/Backend/NNVtrangchu.jsp");
         } else {
             // Đăng nhập thất bại, quay về trang đăng nhập
             request.setAttribute("error", "Tài khoản hoặc mật khẩu không đúng!");

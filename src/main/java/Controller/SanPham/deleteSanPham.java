@@ -22,6 +22,6 @@ public class deleteSanPham extends HttpServlet {
         String maSP = request.getParameter("maSP");
         sanPhamDao.deleteSanPham(maSP);
 
-        response.sendRedirect("listSanPham.jsp");
+        response.sendRedirect("NNVlistSanPham.jsp");
     }
 }

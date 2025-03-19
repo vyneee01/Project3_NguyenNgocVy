@@ -11,94 +11,50 @@
 </head>
 <body>
     <%@ include file="Layout2/NNVHeader2.jsp" %>
-    <!-- Banner -->
-    <div class="banner">
-        Giới thiệu về CoffeLuck
-    </div>
+    
+   <div class="banner-container">
+    <img src="${pageContext.request.contextPath}/images/anhbia100.jpg" alt="Giới thiệu CoffeLuck" class="custom-banner">
+</div>
 
-    <div class="container">
-        <!-- Phần giới thiệu tổng quan -->
-        <h2 class="text-center my-4">☕ CoffeLuck - Hương vị từ trái tim, gắn kết thiên nhiên ☕</h2>
+    <div class="container py-5">
+        <!-- Giới thiệu tổng quan -->
+        <h2 class="text-center mb-4 text-primary">☕ CoffeLuck - Đậm đà từng khoảnh khắc ☕</h2>
+        <p>CoffeLuck không chỉ đơn thuần là một thương hiệu cà phê, mà là một hành trình khám phá những giá trị tinh túy nhất của cà phê Việt Nam. Được tạo nên từ đam mê, sự tận tâm và tình yêu với hạt cà phê, chúng tôi mong muốn mang đến những ly cà phê nguyên bản, giúp bạn tận hưởng trọn vẹn từng khoảnh khắc.</p>
 
-        <p><strong class="highlight">CoffeLuck</strong> là thương hiệu cà phê đến từ <strong class="highlight">Hưng Yên</strong> – vùng đất nổi tiếng với khí hậu ôn hòa, đất đai màu mỡ. Nhờ điều kiện tự nhiên lý tưởng, CoffeLuck mang đến những hạt cà phê thơm ngon, nguyên chất, làm say đắm lòng người.</p>
+        <h4 class="mt-4 text-success">🌿 Giá trị cốt lõi của CoffeLuck</h4>
+        <ul>
+            <li><strong>Chất lượng hàng đầu:</strong> Hạt cà phê được tuyển chọn kỹ lưỡng, rang xay theo công nghệ hiện đại để giữ trọn hương vị.</li>
+            <li><strong>Bảo vệ môi trường:</strong> Chúng tôi áp dụng phương pháp canh tác bền vững, giảm thiểu tác động đến thiên nhiên.</li>
+            <li><strong>Kết nối con người:</strong> Cà phê là cầu nối mang mọi người xích lại gần nhau hơn, từ những cuộc trò chuyện ấm áp đến những buổi họp mặt ý nghĩa.</li>
+        </ul>
 
-        <h4 class="mt-4">🌱 Sự chăm sóc tận tâm – Chất lượng tuyệt vời</h4>
-        <p>Tại CoffeLuck, từng hạt cà phê được trồng, chăm sóc và thu hoạch bằng quy trình nghiêm ngặt. Chúng tôi áp dụng <strong class="highlight">phương pháp canh tác bền vững</strong>, đảm bảo mỗi hạt cà phê đều đạt chất lượng tốt nhất, giữ trọn hương vị tự nhiên.</p>
+        <h4 class="mt-4 text-danger">🎯 Sứ mệnh của chúng tôi</h4>
+        <p>Lan tỏa tình yêu cà phê, mang đến những trải nghiệm thưởng thức chân thực nhất và góp phần xây dựng một cộng đồng yêu cà phê mạnh mẽ.</p>
 
-        <h4 class="mt-4">🌿 Khí hậu – Yếu tố tạo nên hương vị đặc biệt</h4>
-        <p>Hưng Yên có <strong class="highlight">khí hậu thuận lợi</strong> cho cây cà phê phát triển. Mùa nắng nhẹ, mùa đông se lạnh cùng lượng mưa vừa đủ giúp hạt cà phê đậm đà, hương thơm đặc trưng.</p>
-
-        <h4 class="mt-4">🎯 Sứ mệnh của CoffeLuck</h4>
-        <p>CoffeLuck không chỉ mang đến những ly cà phê nguyên chất mà còn truyền tải tình yêu với thiên nhiên. Chúng tôi cam kết cung cấp sản phẩm <strong class="highlight">chất lượng, nguyên bản</strong>, giúp khách hàng tận hưởng từng khoảnh khắc thư giãn trọn vẹn.</p>
-
-        <div class="text-center mt-4">
-            <h3 class="highlight">☕ CoffeLuck – Đậm đà thiên nhiên, gắn kết yêu thương! ☕</h3>
-        </div>
-
-        <!-- 1) Phần Sứ mệnh & Tầm nhìn -->
-        <div class="section-spacing">
-            <h2 class="text-center mb-4" style="color:#D2691E;">Sứ mệnh & Tầm nhìn</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h5 class="highlight">Sứ mệnh</h5>
-                    <p>CoffeLuck mang đến hương vị cà phê đích thực, gìn giữ và tôn vinh giá trị thiên nhiên, đồng thời xây dựng cộng đồng yêu cà phê thân thiện, gần gũi với môi trường.</p>
-                </div>
-                <div class="col-md-6">
-                    <h5 class="highlight">Tầm nhìn</h5>
-                    <p>Trở thành thương hiệu cà phê tiên phong trong lĩnh vực phát triển bền vững, mang đến trải nghiệm cà phê mới lạ và lan tỏa tinh thần “sống xanh” đến mọi người.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2) Phần Đội ngũ CoffeLuck -->
-        <div class="section-spacing">
-            <h2 class="text-center mb-4" style="color:#D2691E;">Đội ngũ CoffeLuck</h2>
-            <div class="row">
-                <!-- Thành viên 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card team-card">
-                        <img src="${pageContext.request.contextPath}/images/logo.jpg" alt="Thành viên 1">
-                        <h5>Nguyễn Ngọc Vỹ</h5>
-                        <p>CEO - Kẻ Tạo Ra Thời Đại Mới Cho Cà Phê</p>
-                    </div>
-                </div>
-                <!-- Thành viên 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card team-card">
-                        <img src="${pageContext.request.contextPath}/images/chutich.jpg" alt="Thành viên 2">
-                        <h5>Lại Thị Phương Linh</h5>
-                        <p>Đồng Sáng Lập CoffeLuck</p>
-                    </div>
-                </div>
-               
-        </div>
-
-        <!-- 3) Phần Phản hồi khách hàng (Testimonials) -->
-        <div class="section-spacing">
-            <h2 class="text-center mb-4" style="color:#D2691E;">Khách hàng nói gì?</h2>
+        <!-- Phản hồi khách hàng -->
+        <div class="mt-5">
+            <h2 class="text-center mb-4 text-warning">Khách hàng nói gì về CoffeLuck?</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
-                        <p>“Cà phê của CoffeLuck thật tuyệt vời, hương vị đậm đà mà vẫn thanh nhẹ. Mình sẽ tiếp tục ủng hộ!”</p>
-                        <div class="testimonial-author">- Thanh Tâm, Hà Nội</div>
+                    <div class="border p-3 rounded shadow-sm bg-light">
+                        <p>“Hương vị cà phê tuyệt vời, rất tự nhiên và nguyên bản. Một ly cà phê buổi sáng tại CoffeLuck giúp tôi khởi đầu ngày mới tràn đầy năng lượng!”</p>
+                        <small class="text-muted">- Thanh Tâm, Hà Nội</small>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
-                        <p>“Tôi ấn tượng với quy trình canh tác bền vững của CoffeLuck. Uống cà phê vừa ngon, vừa thấy yên tâm!”</p>
-                        <div class="testimonial-author">- Hoàng Anh, Sài Gòn</div>
+                    <div class="border p-3 rounded shadow-sm bg-light">
+                        <p>“Quán có không gian thoáng đãng, cà phê đậm đà và nhân viên rất thân thiện. Tôi cảm thấy rất hài lòng!”</p>
+                        <small class="text-muted">- Hoàng Anh, Sài Gòn</small>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
-                        <p>“Lần đầu thưởng thức cà phê Hưng Yên, cảm giác mới lạ và rất đặc trưng. Thật đáng để thử!”</p>
-                        <div class="testimonial-author">- Minh Khoa, Đà Nẵng</div>
+                    <div class="border p-3 rounded shadow-sm bg-light">
+                        <p>“Thật bất ngờ về chất lượng cà phê tại đây! Rất thơm và có hậu vị đặc trưng, chắc chắn tôi sẽ quay lại.”</p>
+                        <small class="text-muted">- Minh Khoa, Đà Nẵng</small>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Kết thúc nội dung -->
     </div>
 
     <%@ include file="Layout2/NNVFooter2.jsp" %>

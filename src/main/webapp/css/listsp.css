@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* Định dạng tổng thể */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf3e7; /* Màu nền cam nhạt */
+    color: #5a3e2b; /* Màu chữ nâu */
+}
+
+section {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #a0522d; /* Nâu đất */
+}
+
+/* Nút bấm trên cùng */
+.top-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    background: #d2691e; /* Cam đậm */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a0522d; /* Nâu đất */
+}
+
+/* Container chứa các card */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.card {
+    background: white;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+    border-left: 5px solid #d2691e; /* Viền trái cam đậm */
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* Style cho ảnh trong card */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    color: #a0522d; /* Nâu đất */
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #704214; /* Nâu đậm */
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* Nút chỉnh sửa và xóa */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.edit-btn, .delete-btn {
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #d2691e; /* Cam đậm */
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #a0522d; /* Nâu đất */
+}
+
+.delete-btn {
+    background: #cd853f; /* Cam nâu nhạt */
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #a0522d; /* Nâu đất */
+}

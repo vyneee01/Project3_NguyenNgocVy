@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/* Chung cho cả 2 trang */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf3e7; /* Màu nền cam nhạt */
+    color: #5a3e2b; /* Màu chữ nâu đậm */
+}
+
+/* Header */
+header {
+    background-color: #a0522d; /* Màu nâu đất */
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Form container */
+.form-container {
+    width: 50%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #d2691e; /* Viền trái cam đậm */
+}
+
+/* Tiêu đề form */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #a0522d; /* Màu nâu */
+}
+
+/* Các phần tử của form */
+label {
+    font-size: 16px;
+    color: #704214; /* Nâu đậm */
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cd853f; /* Màu cam nâu */
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="datetime-local"]:focus {
+    border-color: #a0522d; /* Màu nâu đất khi focus */
+    outline: none;
+}
+
+/* Nút submit */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #d2691e; /* Cam đậm */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #a0522d; /* Nâu đất */
+}
+
+/* Back link */
+a.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    color: #d2691e; /* Cam đậm */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+a.back-link:hover {
+    color: #a0522d; /* Nâu đất */
+}
+
+/* Footer */
+footer {
+    background-color: #a0522d;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .form-container {
+        width: 80%;
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    label, 
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="datetime-local"],
+    button[type="submit"],
+    a.back-link {
+        font-size: 14px;
+    }
+}

@@ -1,7 +1,7 @@
 package model;
 
 public class NhaCungCap {
-    private String maNCC;
+    private int maNCC;  // Changed from String to int
     private String sdt;
     private String tenNCC;
     private String diaChi;
@@ -9,7 +9,8 @@ public class NhaCungCap {
     private String ghiChu;
 
     public NhaCungCap() {}
-    public NhaCungCap(String maNCC, String sdt, String tenNCC, String diaChi, float congNo, String ghiChu) {
+
+    public NhaCungCap(int maNCC, String sdt, String tenNCC, String diaChi, float congNo, String ghiChu) {
         this.maNCC = maNCC;
         this.sdt = sdt;
         this.tenNCC = tenNCC;
@@ -18,8 +19,8 @@ public class NhaCungCap {
         this.ghiChu = ghiChu;
     }
 
-    public String getMaNCC() { return maNCC; }
-    public void setMaNCC(String maNCC) { this.maNCC = maNCC; }
+    public int getMaNCC() { return maNCC; }
+    public void setMaNCC(int maNCC) { this.maNCC = maNCC; }
     public String getSdt() { return sdt; }
     public void setSdt(String sdt) { this.sdt = sdt; }
     public String getTenNCC() { return tenNCC; }

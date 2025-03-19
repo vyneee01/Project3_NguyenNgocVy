@@ -1,17 +1,33 @@
 package model;
 
 public class LoaiPhieu {
-    private String maLP;
-    private String tenLP;
+    private int maLP;      // Mã loại phiếu (INT, khóa chính, tự động tăng)
+    private String tenLP;  // Tên loại phiếu (VARCHAR)
 
-    public LoaiPhieu() {}
-    public LoaiPhieu(String maLP, String tenLP) {
+    // Constructor mặc định
+    public LoaiPhieu() {
+    }
+
+    // Constructor có tham số
+    public LoaiPhieu(int maLP, String tenLP) {
         this.maLP = maLP;
         this.tenLP = tenLP;
     }
 
-    public String getMaLP() { return maLP; }
-    public void setMaLP(String maLP) { this.maLP = maLP; }
-    public String getTenLP() { return tenLP; }
-    public void setTenLP(String tenLP) { this.tenLP = tenLP; }
+    // Getter và Setter
+    public int getMaLP() {
+        return maLP;
+    }
+
+    public void setMaLP(int maLP) {
+        this.maLP = maLP;
+    }
+
+    public String getTenLP() {
+        return tenLP;
+    }
+
+    public void setTenLP(String tenLP) {
+        this.tenLP = tenLP;
+    }
 }

@@ -18,10 +18,10 @@
       <%
         // Danh sách ảnh khuyến mãi theo tên file thực tế
         String[][] khuyenMaiList = {
-          {"anhbia.jpg", "Mua 1 tặng 1 toàn bộ menu!"},
-          {"anhbia2.jpg", "Ưu đãi 50% cho đơn hàng trên 200K"},
-          {"anhbia3.jpg", "Giảm 20K khi thanh toán qua ví điện tử"},
-          {"anhbia4.jpg", "Đồng giá 29K cho tất cả trà sữa"}
+          {"khuyenmai.jpg", "Mua 1 tặng 1 toàn bộ menu!"},
+          {"khuyenmai2.jpg", "Ưu đãi 50% cho đơn hàng trên 200K"},
+          {"khuyenmai3.jpg", "Giảm 20K khi thanh toán qua ví điện tử"},
+          {"khuyenmai4.jpg", "Đồng giá 29K cho tất cả trà sữa"}
         };
 
         for (String[] km : khuyenMaiList) { 
